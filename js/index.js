@@ -81,6 +81,16 @@ ctaHeader.style.color = "black";
 // Add text to cta button
 const ctaBtn = document.querySelector("section div button");
 ctaBtn.textContent = siteContent["cta"]["button"];
+ctaBtn.addEventListener("click", flipMode);
+function flipMode() {
+  document.querySelector("body").style.backgroundColor = "black";
+  aTags.forEach(el => (el.style.color = "white"));
+  navLink.style.color = "white";
+  navLink2.style.color = "white";
+  textContent.forEach(el => (el.style.color = "white"));
+  h4Text.forEach(el => (el.style.color = "white"));
+  ctaHeader.style.color = "white";
+}
 
 // Update the img src for header img
 const headerImg = document.getElementById("middle-img");
@@ -92,6 +102,7 @@ textContent.forEach(el => (el.style.color = "black"));
 
 // Selecting all h4 elements and setting their text content
 const h4Text = document.querySelectorAll("h4");
+h4Text.forEach(el => (el.style.color = "black"));
 h4Text[0].textContent = siteContent["main-content"]["features-h4"];
 h4Text[1].textContent = siteContent["main-content"]["about-h4"];
 h4Text[2].textContent = siteContent["main-content"]["services-h4"];
