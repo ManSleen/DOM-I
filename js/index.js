@@ -58,6 +58,21 @@ const aTags = document.querySelectorAll("nav a");
 aTags.forEach((el, index) => (el.textContent = navValues[index]));
 aTags.forEach(el => (el.style.color = "green"));
 
+// Create and add nav item to end of nav bar
+const navLink = document.createElement("a");
+navLink.textContent = "Last Link";
+navLink.style.color = "green";
+navLink.href = "#";
+let navBar = document.querySelector("nav");
+navBar.appendChild(navLink);
+
+// Create and add nav item to beginning of nav bar
+const navLink2 = document.createElement("a");
+navLink2.textContent = "First Link";
+navLink2.style.color = "green";
+navLink2.href = "#";
+navBar.prepend(navLink2);
+
 // Change text in cta header
 const ctaHeader = document.querySelector("section div h1");
 ctaHeader.innerHTML = siteContent["cta"]["h1"];
